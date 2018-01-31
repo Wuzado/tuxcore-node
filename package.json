@@ -1,13 +1,13 @@
 {
-  "name": "litecore-node",
-  "description": "Full node with extended capabilities using Litecore and Litecoin Core",
+  "name": "garlicore-node",
+  "description": "Full node with extended capabilities using garlicore and garlicoin Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.1.11",
   "main": "./index.js",
-  "repository": "git://github.com/litecoin-project/litecore-node.git",
-  "homepage": "https://github.com/litecoin-project/litecore-node",
+  "repository": "git://github.com/garlicoin-project/garlicore-node.git",
+  "homepage": "https://github.com/garlicoin-project/garlicore-node",
   "bugs": {
-    "url": "https://github.com/litecoin-project/litecore-node/issues"
+    "url": "https://github.com/garlicoin-project/garlicore-node/issues"
   },
   "contributors": [
     {
@@ -35,12 +35,10 @@
     }
   ],
   "bin": {
-    "litecore-node": "./bin/litecore-node",
-    "litecoind": "./bin/litecoind"
+    "garlicore-node": "./bin/garlicore-node",
+    "garlicoind": "./bin/garlicoind"
   },
   "scripts": {
-    "preinstall": "./scripts/download",
-    "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download",
     "test": "mocha -R spec --recursive",
     "regtest": "./scripts/regtest",
     "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
@@ -48,8 +46,8 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "litecoin",
-    "litecoind"
+    "garlicoin",
+    "garlicoind"
   ],
   "dependencies": {
     "async": "^1.3.0",
@@ -59,8 +57,8 @@
     "errno": "^0.1.4",
     "express": "^4.13.3",
     "liftoff": "^2.2.0",
-    "litecoind-rpc": "^0.7.1",
-    "litecore-lib": "^0.13.22",
+    "garlicoind-rpc": "garlicoin-project/garlicoind-rpc",
+    "garlicore-lib": "garlicoin-project/garlicore-lib",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
@@ -75,7 +73,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "litecore-p2p": "^1.1.2",
+    "garlicore-p2p": "garlicoin-project/garlicore-p2p",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
