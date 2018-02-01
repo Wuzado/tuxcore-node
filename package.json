@@ -38,6 +38,8 @@
     "garlicore-node": "./bin/garlicore-node"
   },
   "scripts": {
+    "preinstall": "./scripts/download",
+    "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download",
     "test": "mocha -R spec --recursive",
     "regtest": "./scripts/regtest",
     "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
@@ -56,8 +58,8 @@
     "errno": "^0.1.4",
     "express": "^4.13.3",
     "liftoff": "^2.2.0",
-    "garlicoind-rpc": "garlicoin-project/garlicoind-rpc#master",
-    "garlicore-lib": "garlicoin-project/garlicore-lib#segwit",
+    "garlicoind-rpc": "^0.7.1",
+    "garlicore-lib": "^0.1.0",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
