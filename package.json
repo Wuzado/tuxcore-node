@@ -35,8 +35,7 @@
     }
   ],
   "bin": {
-    "garlicore-node": "./bin/garlicore-node",
-    "garlicoind": "./bin/garlicoind"
+    "garlicore-node": "./bin/garlicore-node"
   },
   "scripts": {
     "test": "mocha -R spec --recursive",
@@ -57,8 +56,8 @@
     "errno": "^0.1.4",
     "express": "^4.13.3",
     "liftoff": "^2.2.0",
-    "garlicoind-rpc": "garlicoin-project/garlicoind-rpc",
-    "garlicore-lib": "garlicoin-project/garlicore-lib",
+    "garlicoind-rpc": "garlicoin-project/garlicoind-rpc#master",
+    "garlicore-lib": "garlicoin-project/garlicore-lib#segwit",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
@@ -73,7 +72,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "garlicore-p2p": "garlicoin-project/garlicore-p2p",
+    "garlicore-p2p": "garlicoin-project/garlicore-p2p#master",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
