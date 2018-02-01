@@ -9,31 +9,6 @@
   "bugs": {
     "url": "https://github.com/garlicoin-project/garlicore-node/issues"
   },
-  "contributors": [
-    {
-      "name": "Charlie Lee",
-      "email": "coblee@litecoin.org"
-    },
-    {
-      "name": "Christopher Jeffrey"
-    },
-    {
-      "name": "Braydon Fuller",
-      "email": "braydon@bitpay.com"
-    },
-    {
-      "name": "Chris Kleeschulte",
-      "email": "chrisk@bitpay.com"
-    },
-    {
-      "name": "Patrick Nagurny",
-      "email": "patrick@bitpay.com"
-    },
-    {
-      "name": "Loshan T",
-      "email": "loshan1212@gmail.com"
-    }
-  ],
   "bin": {
     "garlicore-node": "./bin/garlicore-node"
   },
@@ -74,7 +49,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "garlicore-p2p": "garlicoin-project/garlicore-p2p#master",
+    "garlicore-p2p": "^1.1.2",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
