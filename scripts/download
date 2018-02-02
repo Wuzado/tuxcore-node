@@ -54,7 +54,7 @@ download_bitcoind() {
             echo "Unpacking garlicoin distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                ln -sf "garlicoin-${version}/bin/garlicoind"
+                # ln -sf "garlicoin-${version}/bin/garlicoind"
                 return;
             fi
         fi
