@@ -21,6 +21,6 @@ module.exports.cli = {};
 module.exports.cli.main = require('./lib/cli/main');
 module.exports.cli.daemon = require('./lib/cli/daemon');
 module.exports.cli.garlicore = require('./lib/cli/garlicore');
-module.exports.cli.bitcored = require('./lib/cli/bitcored');
+module.exports.cli.garlicored = require('./lib/cli/garlicored');
 
 module.exports.lib = require('garlicore-lib');
