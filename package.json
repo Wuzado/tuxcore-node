@@ -1,5 +1,5 @@
 {
-  "name": "bitcore-node",
+  "name": "garlicore-node",
   "description": "Full node with extended capabilities using Bitcore and Bitcoin Core",
   "engines": {
     "node": ">=8.0.0"
@@ -7,13 +7,13 @@
   "author": "BitPay <dev@bitpay.com>",
   "version": "5.0.0-beta.44",
   "main": "./index.js",
-  "repository": "git://github.com/bitpay/bitcore-node.git",
-  "homepage": "https://github.com/bitpay/bitcore-node",
+  "repository": "git://github.com/bitpay/garlicore-node.git",
+  "homepage": "https://github.com/bitpay/garlicore-node",
   "bugs": {
-    "url": "https://github.com/bitpay/bitcore-node/issues"
+    "url": "https://github.com/bitpay/garlicore-node/issues"
   },
   "bin": {
-    "bitcore-node": "./bin/bitcore-node"
+    "garlicore-node": "./bin/garlicore-node"
   },
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec --recursive test"
@@ -29,10 +29,10 @@
   ],
   "dependencies": {
     "async": "^2.5.0",
-    "bcoin": "bitpay/bcoin#v1.0.0-beta.14+cash",
+    "bcoin": "git://github.com/garlicoin-project/gcoin.git",
     "bitcoind-rpc": "^0.6.0",
-    "bitcore-lib": "5.0.0-beta.1",
-    "bitcore-p2p": "5.0.0-beta.1",
+    "garlicore-lib": "git://github.com/garlicoin-project/garlicore-lib.git#gcoin",
+    "garlicore-p2p": "git://github.com/garlicoin-project/garlicore-p2p.git#gcoin",
     "bn.js": "^4.11.8",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
