@@ -1,6 +1,6 @@
 'use strict';
 var should = require('chai').should();
-var Tx = require('bcoin').tx;
+var Tx = require('gcoin').tx;
 
 var Encoding = require('../../../lib/services/transaction/encoding');
 

@@ -3,8 +3,8 @@
 var expect = require('chai').expect;
 var BlockService = require('../../../lib/services/block');
 var sinon = require('sinon');
-var bcoin = require('bcoin');
-var Block = bcoin.block;
+var gcoin = require('gcoin');
+var Block = gcoin.block;
 var Encoding  = require('../../../lib/services/block/encoding');
 var utils = require('../../../lib/utils');
 
@@ -33,13 +33,13 @@ describe('Block Service', function() {
   describe('#_detectReorg', function() {
     it('should detect reorg', function() {
       var block = Block.fromRaw(blocks[6], 'hex');
-      blockService._tip = { hash: bcoin.util.revHex(Block.fromRaw(blocks[5], 'hex').prevBlock) };
+      blockService._tip = { hash: gcoin.util.revHex(Block.fromRaw(blocks[5], 'hex').prevBlock) };
       expect(blockService._detectReorg(block)).to.be.true;
     });
 
     it('should not detect reorg', function() {
       var block = Block.fromRaw(blocks[6], 'hex');
-      blockService._tip = { hash: bcoin.util.revHex(Block.fromRaw(blocks[6], 'hex').prevBlock) };
+      blockService._tip = { hash: gcoin.util.revHex(Block.fromRaw(blocks[6], 'hex').prevBlock) };
       expect(blockService._detectReorg(block)).to.be.false;
     });
   });

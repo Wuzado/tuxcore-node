@@ -10,7 +10,7 @@ var utils = require('../../../lib/utils');
 var Block = require('garlicore-lib').Block;
 var BN = require('bn.js');
 var Emitter = require('events').EventEmitter;
-var bcoin = require('bcoin');
+var gcoin = require('gcoin');
 
 describe('Header Service', function() {
 
