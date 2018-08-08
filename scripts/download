@@ -6,22 +6,22 @@ root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.16.0.2"
-url="https://github.com/garlicoin-project/garlicore-garlicoin/releases/download"
-tag="v0.16.0.2-garlicore"
+url="https://github.com/Wuzado/tuxcore-node/releases/"
+tag="v0.16.0.2-tuxcore"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
-        tarball_name="garlicoin-${version}-x86_64-linux-gnu.tar.gz"
+        tarball_name="tuxcoin-${version}-x86_64-linux-gnu.tar.gz"
     else
         echo "Currently only support 64bit"
     fi
     # elif [ "${arch}" == "x86_32" ]; then
-    #     tarball_name="garlicoin-${version}-i686-pc-linux-gnu.tar.gz"
+    #     tarball_name="tuxcoin-${version}-i686-pc-linux-gnu.tar.gz"
     # fi
 elif [ "${platform}" == "darwin" ]; then
-    tarball_name="garlicoin-${version}-osx64.tar.gz"
+    tarball_name="tuxcoin-${version}-osx64.tar.gz"
 else
-    echo "garlicoin binary distribution not available for platform and architecture"
+    echo "tuxcoin binary distribution not available for platform and architecture"
     exit -1
 fi
 
@@ -32,7 +32,7 @@ download_bitcoind() {
 
     cd "${root_dir}/bin"
 
-    echo "Downloading garlicoin: ${binary_url}"
+    echo "Downloading tuxcoin: ${binary_url}"
 
     is_curl=true
     if hash curl 2>/dev/null; then
@@ -51,20 +51,20 @@ download_bitcoind() {
             wget $shasums_url
         fi
         if test -e "${tarball_name}"; then
-            echo "Unpacking garlicoin distribution"
+            echo "Unpacking tuxcoin distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                # ln -sf "garlicoin-${version}/bin/garlicoind"
+                # ln -sf "tuxcoin-${version}/bin/tuxcoind"
                 return;
             fi
         fi
     fi
-    echo "garlicoin binary distribution could not be downloaded"
+    echo "tuxcoin binary distribution could not be downloaded"
     exit -1
 }
 
 verify_download() {
-    echo "Verifying signatures of garlicoin download"
+    echo "Verifying signatures of tuxcoin download"
     gpg --verify "${root_dir}/bin/SHA256SUMS.asc"
 
     if hash shasum 2>/dev/null; then

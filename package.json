@@ -1,16 +1,16 @@
 {
-  "name": "garlicore-node",
-  "description": "Full node with extended capabilities using garlicore and garlicoin Core",
+  "name": "tuxcore-node",
+  "description": "Full node with extended capabilities using tuxcore and tuxcoin Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.1.16",
   "main": "./index.js",
-  "repository": "git://github.com/garlicoin-project/garlicore-node.git",
-  "homepage": "https://github.com/garlicoin-project/garlicore-node",
+  "repository": "git://github.com/Wuzado/tuxcore-node.git",
+  "homepage": "https://github.com/Wuzado/tuxcore-node",
   "bugs": {
-    "url": "https://github.com/garlicoin-project/garlicore-node/issues"
+    "url": "https://github.com/Wuzado/tuxcore-node/issues"
   },
   "bin": {
-    "garlicore-node": "./bin/garlicore-node"
+    "tuxcore-node": "./bin/tuxcore-node"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -22,8 +22,8 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "garlicoin",
-    "garlicoind"
+    "tuxcoin",
+    "tuxcoind"
   ],
   "dependencies": {
     "async": "^1.3.0",
@@ -33,8 +33,8 @@
     "errno": "^0.1.4",
     "express": "^4.13.3",
     "liftoff": "^2.2.0",
-    "garlicoind-rpc": "^0.7.1",
-    "garlicore-lib": "^0.1.4",
+    "tuxcoind-rpc": "^0.7.1",
+    "tuxcore-lib": "^0.1.4",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "garlicore-p2p": "^1.1.2",
+    "tuxcore-p2p": "^1.1.2",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
