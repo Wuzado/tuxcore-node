@@ -12,16 +12,19 @@ tag="v0.16.0.2-tuxcore"
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
         tarball_name="tuxcoin-${version}-x86_64-linux-gnu.tar.gz"
-    else
+    #else
+    #    echo "Currently only support 64bit"
+    #fi
+    elif [ "${arch}" == "x86_32" ] || [ "${arch}" == "i686" ]; then
+        #tarball_name="tuxcoin-${version}-i686-pc-linux-gnu.tar.gz"
         echo "Currently only support 64bit"
+    else 
+        echo "We couldn't recognise your architecture"
     fi
-    # elif [ "${arch}" == "x86_32" ]; then
-    #     tarball_name="tuxcoin-${version}-i686-pc-linux-gnu.tar.gz"
-    # fi
 elif [ "${platform}" == "darwin" ]; then
     tarball_name="tuxcoin-${version}-osx64.tar.gz"
 else
-    echo "tuxcoin binary distribution not available for platform and architecture"
+    echo "Tuxcoin binary distribution not available for platform and architecture"
     exit -1
 fi
 
