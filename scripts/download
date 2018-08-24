@@ -6,7 +6,7 @@ root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.16.0.2"
-url="https://github.com/Wuzado/tuxcore-node/releases/"
+url="https://github.com/Wuzado/tuxcore-node/releases/download"
 tag="v0.16.0.2-tuxcore"
 
 if [ "${platform}" == "linux" ]; then
